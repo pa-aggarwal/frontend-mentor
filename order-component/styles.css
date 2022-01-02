@@ -1,7 +1,116 @@
 
-.attribution {
-    font-size: 11px;
+:root {
+    --primary-paleblue: hsl(225, 100%, 94%);
+    --primary-brightblue: hsl(245, 75%, 52%);
+    --neutral-paleblue: hsl(225, 100%, 98%);
+    --neutral-blue: hsl(224, 23%, 55%);
+    --neutral-darkblue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image:
+        url("images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--primary-paleblue);
+    font: 1.6rem 'Red Hat Display', sans-serif;
+    padding: 5rem;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    display: block;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.bold-text {
+    color: var(--neutral-darkblue);
+    font-weight: 900;
+}
+
+.component {
+    color: var(--neutral-blue);
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 25px 30px -5px #C2D1FF;
     text-align: center;
+    line-height: 1.6;
+    max-width: 45rem;
+    overflow: hidden;
+}
+
+.component a {
+    color: var(--primary-brightblue);
+    font-weight: 700;
+}
+
+.component-content {
+    padding: 3rem 5rem;
+}
+
+.component-img {
+    max-width: 100%;
+}
+
+.plan-wrapper {
+    background-color: var(--neutral-paleblue);
+    border-radius: 1.25rem;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan-cost {
+    flex-grow: 1;
+    margin-left: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pay-button {
+    color: white;
+    background-color: var(--primary-brightblue);
+    border-radius: 1rem;
+    box-shadow: 0 15px 25px -3px #BDBAF3;
+    margin-bottom: 2rem;
+}
+
+.cancel-button {
+    color: inherit;
+}
+
+.attribution {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .attribution a {
