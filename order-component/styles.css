@@ -5,6 +5,7 @@
     --neutral-paleblue: hsl(225, 100%, 98%);
     --neutral-blue: hsl(224, 23%, 55%);
     --neutral-darkblue: hsl(223, 47%, 23%);
+    --hover-color: #7E72FD;
 }
 
 html {
@@ -12,13 +13,12 @@ html {
 }
 
 body {
-    background-image:
-        url("images/pattern-background-desktop.svg");
+    background-image: url("images/pattern-background-desktop.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: var(--primary-paleblue);
     font: 1.6rem 'Red Hat Display', sans-serif;
-    padding: 5rem;
+    padding: 4rem;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -35,11 +35,11 @@ h1 {
 p {
     font-size: 1.7rem;
     font-weight: 500;
+    padding: 0 1rem;
     margin-bottom: 2rem;
 }
 
 button {
-    background-color: inherit;
     border: none;
     font-family: inherit;
     font-weight: 700;
@@ -68,6 +68,11 @@ button {
 .component a {
     color: var(--primary-brightblue);
     font-weight: 700;
+}
+
+.component a:hover {
+    color: var(--hover-color);
+    text-decoration: none;
 }
 
 .component-content {
@@ -101,10 +106,23 @@ button {
     border-radius: 1rem;
     box-shadow: 0 15px 25px -3px #BDBAF3;
     margin-bottom: 2rem;
+    transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
 }
 
 .cancel-button {
+    background-color: inherit;
     color: inherit;
+    font-weight: 900;
+}
+
+.cancel-button:hover {
+    color: var(--neutral-darkblue);
+    cursor: pointer;
 }
 
 .attribution {
@@ -115,4 +133,26 @@ button {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        background-image: url("images/pattern-background-mobile.svg");
+        height: initial;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 45%;
+    }
+
+    .component-content {
+        font-size: 1.8rem;
+        padding: 3rem;
+    }
 }
