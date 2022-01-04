@@ -94,3 +94,51 @@ h1 {
 .attribution a {
     color: hsl(277, 64%, 61%);
 }
+
+@media screen and (min-width: 1000px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        margin-bottom: 2.75rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .card-content {
+        text-align: left;
+        padding: 6rem;
+        order: -1;
+    }
+
+    .card-description {
+        margin: 0;
+    }
+
+    .card-img {
+        background-image:
+            linear-gradient(var(--violet-tint), var(--violet-tint)),
+            url("images/image-header-desktop.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 446px;
+        padding-top: 0;
+    }
+
+    .stats-list {
+        margin-top: 7rem;
+        display: flex;
+    }
+
+    .stats-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 7rem;
+    }
+}
