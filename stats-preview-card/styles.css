@@ -1,11 +1,96 @@
 
+html {
+    font-size: 62.5%;
+}
 
+body {
+    background-color: hsl(233, 47%, 7%);
+    font: 1.5rem 'Inter', sans-serif;
+    padding: 2rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.bold-text {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.accent {
+    color: hsl(277, 64%, 61%);
+}
+
+.card {
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+    max-width: 42rem;
+    overflow: hidden;
+}
+
+/* https://stackoverflow.com/questions/600743 */
+.card-img {
+    --violet-tint: hsla(277, 80%, 35%, 0.6);
+    background-image:
+        linear-gradient(var(--violet-tint), var(--violet-tint)),
+        url("images/image-header-mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: calc(calc(480 / 654) * 100%);
+}
+
+.card-content {
+    padding: 4rem 2.5rem;
+}
+
+.card-description {
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+.stats-list {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-item:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.stat {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    text-transform: initial;
+    letter-spacing: normal;
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
 .attribution {
+    color:hsl(0, 0%, 100%);
     font-size: 11px;
     text-align: center;
+    margin-top: 3rem;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(277, 64%, 61%);
 }
