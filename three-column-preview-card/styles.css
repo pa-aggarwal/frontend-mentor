@@ -1,9 +1,114 @@
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font: 1.5rem 'Lexend Deca', sans-serif;
+    padding: 2rem;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    max-width: 40rem;
+    overflow: hidden;
+}
+
+.column {
+    padding: 4.5rem;
+}
+
+.column:nth-child(1) {
+    background-color: hsl(31, 77%, 52%);
+}
+.column:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+.column:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.column-heading {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 2.5rem 0;
+}
+
+.column-descrip {
+    line-height: 1.7;
+    margin-bottom: 2.25rem;
+}
+
+.column-btn {
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 3rem;
+    font: inherit;
+    padding: 1.4rem 2.5rem;
+    transition: background-color .2s ease-out;
+}
+
+.column:nth-child(1) .column-btn {
+    color: hsl(31, 77%, 52%);
+}
+.column:nth-child(2) .column-btn {
+    color: hsl(184, 100%, 22%);
+}
+.column:nth-child(3) .column-btn {
+    color: hsl(179, 100%, 13%);
+}
+
+/* Add .column for same specificity as selectors for colors */
+.column .column-btn:hover,
+.column .column-btn:focus {
+    background-color: inherit;
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+    outline: none;
+}
+
 .attribution {
-    font-size: 11px;
+    font-size: 1.5rem;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(184, 100%, 22%);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 300px) {
+    .column {
+        padding: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    .container {
+        display: flex;
+        max-width: 90rem;
+        height: 49rem;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
