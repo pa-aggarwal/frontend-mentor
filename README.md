@@ -8,3 +8,4 @@ My solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/
 | [Order Summary Component](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/order-component/index.html) | :white_check_mark: |
 | [Stats Preview Card Component](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/stats-preview-card/index.html) | :white_check_mark: |
 | [3-Column Preview Card Component](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/three-column-preview-card/index.html) | :white_check_mark: |
+| [Social Proof Section](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) | | :construction: |
