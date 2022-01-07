@@ -1,9 +1,122 @@
 
+html {
+    font-size: 62.5%;
+}
+
+body, h1, h2, p {
+    margin: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(229, 6%, 66%);
+    font: 400 1.5rem 'Poppins', sans-serif;
+    padding: 5rem 2.5rem;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+
+h1 span {
+    display: block;
+    font-weight: 600;
+}
+
+h2 {
+    color:hsl(234, 12%, 34%);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-section {
+    margin: 0 auto 5rem;
+    max-width: 40rem;
+}
+
+.feature-section header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "supervisor" "team-builder" "karma" "calculator";
+    row-gap: 3rem;
+}
+
+.card-feature {
+    background-color: white;
+    border-radius: 4px 4px 10px 10px;
+    box-shadow: 0 13px 15px #D4E0EF;
+    padding: 2.5rem;
+}
+
+.supervisor {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    grid-area: supervisor;
+}
+.team-builder {
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-area: team-builder;
+}
+.karma {
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-area: karma;
+}
+.calculator {
+    border-top: 3px solid hsl(212, 86%, 64%);
+    grid-area: calculator;
+}
+
+.card-feature p {
+    margin-bottom: 3.5rem;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .attribution {
-    font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(234, 12%, 34%);
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .feature-section {
+        max-width: 108rem;
+    }
+
+    .feature-section header {
+        margin: 0 auto 5rem;
+        max-width: 55rem;
+    }
+
+    .feature-section header p {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            ". team-builder ."
+            "supervisor team-builder calculator"
+            "supervisor karma calculator"
+            ". karma .";
+        column-gap: 3rem;
+    }
 }
