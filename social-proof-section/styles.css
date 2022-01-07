@@ -158,10 +158,82 @@ blockquote p::after { content: "\201D"; }
 }
 
 .attribution {
-    font-size: 11px;
+    color: hsl(300, 43%, 22%);
     text-align: center;
+    padding: 2rem;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1160px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+
+    main {
+        background-image:
+            url("images/bg-pattern-top-mobile.svg"),
+            url("images/bg-pattern-bottom-mobile.svg");
+        background-size: 100%, 100%;
+        padding: 10rem 3rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .container {
+        max-width: 45rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        justify-items: stretch;
+        row-gap: 4rem;
+    }
+
+    .social-header {
+        text-align: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .social-header p {
+        font-size: inherit;
+    }
+
+    .ratings-section {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .rating:nth-of-type(n) {
+        right: auto;
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .rating-icons {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .testimonials-section {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        flex-direction: column;
+    }
+
+    .testimonial:nth-of-type(n) {
+        top: auto;
+    }
+
+    .testimonial:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
 }
