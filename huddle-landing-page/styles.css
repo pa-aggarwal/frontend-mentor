@@ -103,3 +103,68 @@ h1 {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+@media (max-width: 1300px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .content-img-wrapper {
+        flex-shrink: 1;
+    }
+
+    .content-img-wrapper img {
+        max-width: 100%;
+    }
+
+    .content-text {
+        flex-shrink: 2;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .intro-section {
+        background-image: url("./images/bg-mobile.svg");
+        background-size: contain;
+        background-position: top center;
+    }
+
+    .intro-section p {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 4rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-text {
+        text-align: center;
+    }
+
+    .social-nav {
+        align-self: center;
+        margin-top: 6rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 6rem;
+    }
+
+    .logo-img {
+        max-width: 60%;
+    }
+
+}
