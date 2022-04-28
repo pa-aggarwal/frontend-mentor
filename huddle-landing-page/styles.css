@@ -1,6 +1,102 @@
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 1.8rem 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font: 600 4rem 'Poppins', sans-serif;
+    margin: 4.5rem 0 2rem;
+}
+
+.intro-section {
+    background-image: url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    color: white;
+}
+
+.intro-section p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 7rem;
+}
+
+.container header {
+    align-self: flex-start;
+}
+
+.logo-img {
+    max-width: 80%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+    margin-top: 8rem;
+}
+
+.register-btn {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    font: 1.9rem 'Poppins', sans-serif;
+    box-shadow: 0.5rem 0.75rem 0.75rem rgb(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 4.5rem;
+    padding: 1.25rem 5.75rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.register-btn:hover {
+    cursor: pointer;
+    background-color: hsl(300, 69%, 71%);
+}
+
+.register-btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.register-btn:hover a {
+    color: white;
+}
+
+.social-nav {
+    align-self: flex-end;
+}
+
+.social-icon {
+    border-radius: 50%;
+    border: 0.1rem solid white;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5em;
+    width: 2rem;
+}
+
+.social-icon + .social-icon {
+    margin-left: 1rem;
+}
+
+.social-icon:hover {
+    cursor: pointer;
+    border: 0.1rem solid hsl(300, 99%, 71%);
+    color: hsl(300, 99%, 71%);
+}
+
 .attribution {
-    font-size: 11px;
     text-align: center;
 }
 
