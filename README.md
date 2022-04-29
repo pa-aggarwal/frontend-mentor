@@ -11,3 +11,4 @@ My solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/
 | [Social Proof Section](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/social-proof-section/index.html) | :white_check_mark: |
 | [Four Card Feature Section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/four-card-feature-section/index.html) | :white_check_mark: |
 | [Huddle Landing Page](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/huddle-landing-page/index.html) | :white_check_mark: |
+| [Profile Card Component](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) | | :construction: |
