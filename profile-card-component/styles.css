@@ -38,6 +38,7 @@ h3 {
 .card-component {
     background-color: white;
     border-radius: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 2rem 1rem hsl(185, 75%, 34%);
     overflow: hidden;
     width: 100%;
     max-width: 40rem;
