@@ -1,3 +1,102 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: "Overpass", sans-serif;
+    margin: 0;
+}
+
+h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.content {
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(217, 12%, 63%);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.component {
+    background-color: hsl(208, 25%, 13%);
+    border-radius: 3rem;
+    max-width: 33rem;
+    padding: 3.5rem;
+}
+
+.circle-bg {
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.icon-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 1.7rem;
+}
+
+.ratings label {
+    transition: all 0.3s;
+}
+
+.ratings label:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+}
+
+.submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 3rem;
+    color: hsl(0, 0%, 100%);
+    font: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    cursor: pointer;
+}
 
 .attribution {
     font-size: 11px;
@@ -6,4 +105,22 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 410px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    .component {
+        border-radius: 2rem;
+        padding: 3.5rem 2.5rem;
+    }
+
+    .ratings label {
+        font-size: 1.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 }
