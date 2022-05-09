@@ -19,17 +19,17 @@
             </div>
             <h2>How did we do?</h2>
             <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-            <form action="">
+            <form action="" id="rating-form">
                 <div class="ratings">
-                    <input type="radio" name="rating" id="rating-1" value="1">
+                    <input type="radio" name="rating" id="rating-1" value="1" class="hide">
                     <label for="rating-1" class="circle-bg">1</label>
-                    <input type="radio" name="rating" id="rating-2" value="2">
+                    <input type="radio" name="rating" id="rating-2" value="2" class="hide">
                     <label for="rating-2" class="circle-bg">2</label>
-                    <input type="radio" name="rating" id="rating-3" value="3">
+                    <input type="radio" name="rating" id="rating-3" value="3" class="hide">
                     <label for="rating-3" class="circle-bg">3</label>
-                    <input type="radio" name="rating" id="rating-4" value="4">
+                    <input type="radio" name="rating" id="rating-4" value="4" class="hide">
                     <label for="rating-4" class="circle-bg">4</label>
-                    <input type="radio" name="rating" id="rating-5" value="5">
+                    <input type="radio" name="rating" id="rating-5" value="5" class="hide">
                     <label for="rating-5" class="circle-bg">5</label>
                 </div>
                 <button id="submit-btn" class="submit-btn">Submit</button>
@@ -37,7 +37,7 @@
         </div>
         <!-- Rating state end -->
         <!-- Thank you state start -->
-        <div class="component" id="thank-state">
+        <div class="component hide thank-state" id="thank-state">
             <div class="illustration-wrapper">
                 <img src="./images/illustration-thank-you.svg" alt="">
             </div>
