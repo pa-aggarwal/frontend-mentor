@@ -96,6 +96,16 @@ h2 {
     transition: transform 0.5s;
 }
 
+.selected-button {
+    color: hsl(238, 29%, 16%);
+    font-weight: bold;
+}
+
+/* Point the arrow upwards when the button is selected */
+.selected-button .arrow-img {
+    transform: rotate(180deg);
+}
+
 .answer {
     color: hsl(240, 6%, 50%);
     margin: 0 0 1.5rem;
