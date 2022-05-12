@@ -1,4 +1,102 @@
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: hsl(217, 19%, 35%);
+    background-color: hsl(210, 46%, 95%);
+    font: 500 1.6rem 'Manrope', sans-serif;
+    margin: 0;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+.component {
+    --component-round-corner: 1.5rem;
+    background-color: white;
+    border-radius: var(--component-round-corner);
+    box-shadow: 0 2rem 3.5rem hsl(210, 46%, 88%);
+    display: flex;
+    max-width: 95rem;
+    margin-bottom: 6rem;
+}
+
+.component h2 {
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin: 0;
+}
+
+.component p {
+    color: hsl(214, 17%, 51%);
+    word-spacing: 1px;
+    line-height: 1.5;
+    margin: 2rem 0;
+}
+
+.component-image-wrapper {
+    flex-basis: 45%;
+}
+
+.component-image {
+    flex-basis: 45%;
+    border-top-left-radius: var(--component-round-corner);
+    border-bottom-left-radius: var(--component-round-corner);
+    object-fit: cover;
+    object-position: left;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.component-body {
+    flex-basis: 55%;
+    padding: 4rem 5.5rem;
+}
+
+.component-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.component-footer-info {
+    display: flex;
+}
+
+.author-image-wrapper {
+    flex-basis: 6rem;
+    margin-right: 2rem;
+}
+
+.author-image {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.component-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.component-author {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.component-date {
+    color: hsl(212, 23%, 69%);
+}
+
 .attribution {
     text-align: center;
 }
