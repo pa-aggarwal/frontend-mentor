@@ -14,3 +14,4 @@ My solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/
 | [Profile Card Component](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/profile-card-component/index.html) | :white_check_mark: |
 | [Interactive Rating Component](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/interactive-rating-component/index.html) | :white_check_mark: |
 | [FAQ Accordion Card](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/faq-accordion-card/index.html) | :white_check_mark: |
+| [Article Preview Component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT) | | :construction: |
