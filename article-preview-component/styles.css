@@ -97,10 +97,98 @@ body {
     color: hsl(212, 23%, 69%);
 }
 
+.share-btn-wrapper {
+    position: relative;
+}
+
+.share-popup {
+    --popup-bg-color: hsl(217, 19%, 35%);
+    background-color: var(--popup-bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem hsl(210, 46%, 90%);
+    color: hsl(212, 23%, 69%);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    top: -8.5rem;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+    width: max-content;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.share-popup::after {
+    content: "";
+    /* Triangle shape pointing down */
+    border-width: 1.5rem;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: var(--popup-bg-color);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.show-popup {
+    animation: popup-fadeup 0.4s ease-in forwards;
+}
+
+.share-text {
+    display: inline-block;
+    margin-right: 1.75rem;
+}
+
+.social-link:not(:last-of-type) {
+    margin-right: 1.5rem;
+}
+
+.share-btn {
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    border: none;
+    width: 4rem;
+    height: 4rem;
+}
+
+.share-btn:hover,
+.active-share-btn {
+    background-color: hsl(214, 17%, 51%);
+    color: white;
+    cursor: pointer;
+}
+
+.share-btn:hover .share-icon,
+.active-share-btn .share-icon {
+    fill: white;
+}
+
 .attribution {
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@keyframes popup-fadeup {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0.7rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-0.7rem);
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    /* Move the popup to prevent interfering with content padding */
+    .share-popup { left: -150%; }
+    .share-popup::after { left: 81%; }
 }
