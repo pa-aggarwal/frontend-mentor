@@ -1,4 +1,3 @@
-
 html {
     font-size: 62.5%;
 }
@@ -32,14 +31,14 @@ body {
 .component h2 {
     font-weight: 700;
     font-size: 2.7rem;
+    line-height: 1.4;
     margin: 0;
 }
 
 .component p {
     color: hsl(214, 17%, 51%);
-    word-spacing: 1px;
     line-height: 1.5;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
 }
 
 .component-image-wrapper {
@@ -47,7 +46,6 @@ body {
 }
 
 .component-image {
-    flex-basis: 45%;
     border-top-left-radius: var(--component-round-corner);
     border-bottom-left-radius: var(--component-round-corner);
     object-fit: cover;
@@ -94,6 +92,7 @@ body {
 }
 
 .component-date {
+    letter-spacing: 0.5px;
     color: hsl(212, 23%, 69%);
 }
 
@@ -111,14 +110,18 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     position: absolute;
-    top: -8.5rem;
-    left: 50%;
     display: flex;
     align-items: center;
     padding: 2rem 4rem;
-    width: max-content;
     visibility: hidden;
+}
+
+.show-popup-desktop {
+    animation: popup-fadeup 0.4s ease-in forwards;
+    top: -8.5rem;
+    left: 50%;
     z-index: 1;
+    width: max-content;
 }
 
 .share-popup::after {
@@ -132,10 +135,6 @@ body {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.show-popup {
-    animation: popup-fadeup 0.4s ease-in forwards;
 }
 
 .share-text {
@@ -191,4 +190,68 @@ body {
     /* Move the popup to prevent interfering with content padding */
     .share-popup { left: -150%; }
     .share-popup::after { left: 81%; }
+}
+
+@media screen and (max-width: 950px) {
+    .component {
+        flex-direction: column;
+        max-width: 55rem;
+    }
+    .component-image {
+        border-top-right-radius: var(--component-round-corner);
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 47.5%;
+    }
+
+    .no-display {
+        display: none;
+    }
+
+    .component {
+        --padding-hori: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    .component h2 {
+        font-size: 2.5rem;
+    }
+
+    .component-body {
+        padding: 0;
+    }
+
+    .component-body-top {
+        padding: 5rem var(--padding-hori) 0;
+    }
+
+    .component-footer {
+        padding: 2.5rem var(--padding-hori);
+    }
+
+    .share-popup {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        font-size: 1.8rem;
+        padding: 2.5rem var(--padding-hori);
+        justify-content: space-between;
+    }
+
+    .share-popup::after {
+        content: none;
+    }
+
+    .share-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .show-popup-mobile {
+        position: unset;
+        visibility: visible;
+    }
 }
