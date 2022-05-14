@@ -15,3 +15,4 @@ My solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/
 | [Interactive Rating Component](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/interactive-rating-component/index.html) | :white_check_mark: |
 | [FAQ Accordion Card](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/faq-accordion-card/index.html) | :white_check_mark: |
 | [Article Preview Component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/article-preview-component/index.html) | :white_check_mark: |
+| [Base Apparel Page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0) | | :construction: |
