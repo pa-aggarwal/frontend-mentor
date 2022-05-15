@@ -52,12 +52,11 @@ p {
 }
 
 .logo-wrapper {
-    margin: 0 30% 7rem 20%;
+    padding: 0 30% 7rem 20%;
 }
 
 .launch-text {
-    margin-left: 20%;
-    margin-right: 30%;
+    padding: 0 30% 0 20%;
     flex-grow: 2;
     display: flex;
     flex-direction: column;
@@ -77,6 +76,15 @@ p {
     display: inline-block;
     padding: 1.75rem 2.75rem;
     width: 100%;
+}
+
+.input-email-invalid {
+    border: 1px solid hsl(0, 93%, 68%);
+}
+
+.input-email:focus {
+    border: 1px solid hsl(0, 6%, 24%);
+    outline: none;
 }
 
 .input-email::placeholder {
@@ -104,6 +112,34 @@ p {
     cursor: pointer;
 }
 
+.icon-error {
+    position: absolute;
+    top: 50%;
+    right: 3.25rem;
+    transform: translateY(-50%);
+    transition: right 0.5s;
+    z-index: 1;
+}
+
+.icon-error-show {
+    right: 11rem;
+}
+
+.feedback {
+    font-size: 1.3rem;
+    padding-left: 2.75rem;
+    margin: 0.75rem 0 0;
+    visibility: hidden;
+}
+
+.feedback-show {
+    visibility: visible;
+}
+
+.feedback-error {
+    color: hsl(0, 93%, 68%);
+}
+
 .hero-wrapper {
     flex-basis: 40%;
 }
@@ -111,6 +147,7 @@ p {
 .hero-image {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .attribution {
