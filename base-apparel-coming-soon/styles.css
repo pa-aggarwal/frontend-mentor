@@ -151,10 +151,48 @@ p {
 }
 
 .attribution {
-    font-size: 11px;
+    padding: 0 2rem;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: hsl(0, 6%, 24%);
+}
+
+@media screen and (max-width: 1000px) {
+    .launch-content {
+        background-image: none;
+        background-color: hsl(0, 100%, 98%);
+        padding: 0;
+    }
+
+    .logo-wrapper {
+        padding: 4rem;
+    }
+
+    .launch-text {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 6rem 4rem;
+        text-align: center;
+    }
+
+    .feedback {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 4.25rem;
+        letter-spacing: 10px;
+    }
+
+    .input-email { font-size: 1.4rem; }
+    .submit-btn { padding: 0 3rem; }
+    .icon-error-show { right: 8.5rem; }
 }
