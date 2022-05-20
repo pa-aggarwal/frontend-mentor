@@ -118,11 +118,51 @@ button:hover,
     margin-bottom: var(--margin-vert);
 }
 
+.dropdown-name {
+    margin-right: 1rem;
+}
+
+.icon-arrow {
+    vertical-align: middle;
+}
+
+.dropdown-list {
+    padding-left: 3rem;
+    margin-top: var(--margin-vert);
+    position: relative;
+}
+
+.dropdown-list:hover {
+    cursor: default;
+}
+
+.todo::before {
+    content: url("./images/icon-todo.svg");
+}
+.calendar::before {
+    content: url("./images/icon-calendar.svg");
+}
+.reminders::before {
+    content: url("./images/icon-reminders.svg");
+}
+.planning::before {
+    content: url("./images/icon-planning.svg");
+}
+
+.todo::before,
+.calendar::before,
+.reminders::before,
+.planning::before {
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
 .account-links {
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .account-links a:not(:last-child) {
