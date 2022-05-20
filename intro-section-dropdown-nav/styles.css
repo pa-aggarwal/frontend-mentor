@@ -12,9 +12,18 @@ body {
     font: 500 1.6rem 'Epilogue', sans-serif;
 }
 
+main {
+    position: relative;
+}
+
 h1 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 p {
@@ -30,13 +39,14 @@ button {
     padding: 0;
 }
 
-button:hover {
+button:hover,
+.dropdown:hover {
     cursor: pointer;
 }
 
 .button {
     border-radius: 1.5rem;
-    border: 1px solid hsl(0, 0%, 41%);
+    border: 2px solid hsl(0, 0%, 41%);
     color: hsl(0, 0%, 41%);
     text-decoration: none;
     display: inline-block;
@@ -45,6 +55,7 @@ button:hover {
 
 .button-filled {
     background-color: hsl(0, 0%, 8%);
+    border-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
 }
 
@@ -57,6 +68,65 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.transparent-bg {
+    animation: darken-bg 0.75s ease-in forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.side-panel {
+    animation: slidein 0.75s ease-in forwards;
+    background-color: white;
+    color: hsl(0, 0%, 41%);
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    z-index: 2;
+}
+
+.side-panel a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.side-panel-flex {
+    --margin-vert: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.close-button {
+    align-self: flex-end;
+    margin-bottom: var(--margin-vert);
+}
+
+.side-nav-list li:not(:last-child) {
+    margin-bottom: var(--margin-vert);
+}
+
+.account-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.account-links a:not(:last-child) {
+    margin-bottom: 1.5rem;
 }
 
 .intro-section {
@@ -84,6 +154,16 @@ button:hover {
 
 .client:not(:last-child) {
     margin-right: 1.5rem;
+}
+
+@keyframes darken-bg {
+    from { background-color: transparent; }
+    to { background-color: rgba(0, 0, 0, 0.6); }
+}
+
+@keyframes slidein {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
 }
 
 .attribution {
