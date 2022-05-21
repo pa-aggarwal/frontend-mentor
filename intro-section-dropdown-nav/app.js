@@ -11,6 +11,17 @@ function toggleSidePanel(event) {
     sidePanel.classList.toggle("side-panel-flex");
 }
 
+function moveSidePanel() {
+    const topNav = document.querySelector(".top-nav");
+    topNav.removeChild(menuButton);
+    const topNavLeft = document.createElement("div");
+    topNavLeft.classList.add("top-nav-left");
+    topNavLeft.appendChild(document.querySelector("#logo"));
+    topNavLeft.appendChild(sideNav);
+    topNav.appendChild(topNavLeft);
+    topNav.appendChild(document.querySelector(".account-links"));
+}
+
 menuButton.addEventListener("click", toggleSidePanel);
 closeButton.addEventListener("click", toggleSidePanel);
 
@@ -33,3 +44,7 @@ sideNav.addEventListener("click", function(event) {
         arrow.src = `./images/icon-arrow-${arrowDir}.svg`;
     }
 });
+
+if (window.innerWidth >= 1000) {
+    moveSidePanel();
+}
