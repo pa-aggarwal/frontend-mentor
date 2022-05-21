@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    background-color: hsl(0, 0%, 98%);
     font: 500 1.6rem 'Epilogue', sans-serif;
 }
 
@@ -53,10 +54,21 @@ button:hover,
     padding: 1.4rem 2.5rem;
 }
 
+.button:hover {
+    border: 2px solid hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 8%);
+}
+
 .button-filled {
     background-color: hsl(0, 0%, 8%);
     border-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
+    transition: all 0.2s ease-in;
+}
+
+.button-filled:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 8%);
 }
 
 .image-wrapper img {
@@ -174,6 +186,8 @@ button:hover,
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 63rem;
+    margin: 0 auto;
 }
 
 .intro-text {
@@ -209,6 +223,7 @@ button:hover,
 
 .attribution {
     text-align: center;
+    padding: 2rem 1.5rem;
 }
 
 .attribution a {
@@ -220,6 +235,17 @@ button:hover,
 }
 
 @media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 6.5rem;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: -1;
+    }
+
+    h1 span {
+        display: block;
+    }
+
     .top-nav {
         color: hsl(0, 0%, 41%);
         padding: 1.5rem 3rem;
@@ -294,8 +320,40 @@ button:hover,
         margin-right: 3rem;
     }
 
+    .intro-section {
+        flex-direction: row;
+        column-gap: 5rem;
+        justify-content: space-between;
+        padding: 2rem;
+        max-width: 120rem;
+    }
+
+    .intro-section .image-wrapper {
+        max-width: 50rem;
+    }
+
+    .intro-text {
+        text-align: left;
+        padding: 0;
+        max-width: 50rem;
+        order: -1;
+    }
+
+    .intro-text p {
+        max-width: 85%;
+    }
+
+    .client-list {
+        justify-content: flex-start;
+        margin-top: 10rem;
+    }
+
     @keyframes fadein {
         from { opacity: 0; }
         to { opacity: 1; }
     }
+}
+
+@media screen and (min-width: 1100px) {
+    h1 { font-size: 7.5rem; }
 }

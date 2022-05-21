@@ -22,6 +22,11 @@ function moveSidePanel() {
     topNav.appendChild(document.querySelector(".account-links"));
 }
 
+function changeHeroImage() {
+    const heroImage = document.querySelector("#intro-image");
+    heroImage.src = "./images/image-hero-desktop.png";
+}
+
 menuButton.addEventListener("click", toggleSidePanel);
 closeButton.addEventListener("click", toggleSidePanel);
 
@@ -47,4 +52,5 @@ sideNav.addEventListener("click", function(event) {
 
 if (window.innerWidth >= 1000) {
     moveSidePanel();
+    changeHeroImage();
 }

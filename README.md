@@ -16,4 +16,4 @@ My solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/
 | [FAQ Accordion Card](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/faq-accordion-card/index.html) | :white_check_mark: |
 | [Article Preview Component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/article-preview-component/index.html) | :white_check_mark: |
 | [Base Apparel Page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/base-apparel-coming-soon/index.html) | :white_check_mark: |
-| [Intro Section Dropdown Nav](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5) | | :construction: |
+| [Intro Section Dropdown Nav](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5) | [Solution](https://pa-aggarwal.github.io/frontend-mentor/intro-section-dropdown-nav/index.html) | :white_check_mark: |
