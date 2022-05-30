@@ -4,10 +4,14 @@ async function getJSON() {
     return json;
 }
 
+function convertNameToClass(name) {
+    return name.replaceAll(" ", "-").toLowerCase();
+}
+
 function createTimeTracker(tracker) {
     const { title, current, previous } = tracker;
     return (`
-        <section class="track-section ${title.replaceAll(" ", "-").toLowerCase()}">
+        <section class="track-section ${convertNameToClass(title)}">
             <div class="track-info">
                 <div classs="track-topbar">
                     <h2 class="track-title">${title}</h2>
@@ -52,6 +56,25 @@ function addTimeframesToForm(timeframes, checkedTf) {
     return timeForm;
 }
 
+function updateTimeElement(container, selector, time) {
+    const element = container.querySelector(selector);
+    element.setAttribute("datetime", `PT${time}H`);
+    element.textContent = `${time}hrs`;
+}
+
+function updateDashboardTimeframe(timeframe, newTrackers) {
+    const prevTfText = {
+        "daily": "Yesterday", "weekly": "Last Week", "monthly": "Last Month"
+    }[timeframe];
+    for (let tracker of newTrackers) {
+        const { title, current, previous } = tracker;
+        const container = document.querySelector(`.${convertNameToClass(title)}`);
+        updateTimeElement(container, ".duration-now", current);
+        updateTimeElement(container, ".duration-prev", previous);
+        container.querySelector(".timeframe-prev").textContent = prevTfText;
+    }
+}
+
 const getTrackersForTimeframe = (timeframe, data) => {
     return data.map(function({ title, timeframes }) {
         return {
@@ -70,6 +93,14 @@ async function main() {
     const form = addTimeframesToForm(timeframes, "weekly");
     const trackers = getTrackersForTimeframe("weekly", data);
     addTrackersToDashboard(trackers);
+
+    // Updates times shown in trackers using timeframe labels
+    form.addEventListener("click", function(event) {
+        const newTimeframe = event.target.getAttribute("for");
+        if (!newTimeframe) return undefined;
+        const newTrackers = getTrackersForTimeframe(newTimeframe, data);
+        updateDashboardTimeframe(newTimeframe, newTrackers);
+    });
 }
 
 main();
