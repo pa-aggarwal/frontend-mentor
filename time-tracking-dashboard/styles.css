@@ -1,6 +1,190 @@
+:root {
+    --color-bg: hsl(226, 43%, 10%);
+    --color-report: hsl(246, 80%, 60%);
+    --color-tracker: hsl(235, 46%, 20%);
+    --color-tracker-hover: hsl(236, 40%, 35%);
+    --color-text-dark: hsl(235, 45%, 61%);
+    --color-text-pale: hsl(236, 100%, 87%);
+    --color-text: hsl(0, 100%, 100%);
+    --color-work: hsl(15, 100%, 70%);
+    --color-play: hsl(195, 74%, 62%);
+    --color-study: hsl(348, 100%, 68%);
+    --color-exercise: hsl(145, 58%, 55%);
+    --color-social: hsl(264, 64%, 52%);
+    --color-care: hsl(43, 84%, 65%);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+   box-sizing: inherit;
+   margin: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font: 400 1.8rem 'Rubik', sans-serif;
+    padding: 10rem 3rem;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 4.25rem;
+    margin-top: 0.5rem;
+}
+
+.small-light-text {
+    color: var(--color-text-pale);
+    font-size: 1.6rem;
+}
+
+.dashboard {
+    --border-round: 1.5rem;
+    --dashboard-item-padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.track-header {
+    --report-height: 70%;
+    background-color: var(--color-tracker);
+    border-radius: var(--border-round);
+    grid-row: span 2;
+}
+
+.track-report {
+    background-color: var(--color-report);
+    border-radius: var(--border-round);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--dashboard-item-padding);
+    height: var(--report-height);
+}
+
+.avatar-wrapper {
+    border-radius: 50%;
+    border: 3px solid var(--color-text);
+    margin-bottom: 4.5rem;
+    width: 35%;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.timeframe-form {
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--dashboard-item-padding);
+    height: calc(100% - var(--report-height));
+}
+
+/* Hides the radio button circles */
+.timeframe-form input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: inherit;
+}
+
+.timeframe-form input:checked + label,
+.timeframe-form input:hover + label {
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.track-section {
+    background-position: top -1rem right 2rem;
+    background-repeat: no-repeat;
+    border-radius: var(--border-round);
+    padding-top: 4.25rem;
+}
+
+.work {
+    background-color: var(--color-work);
+    background-image: url("./images/icon-work.svg");
+}
+.play {
+    background-color: var(--color-play);
+    background-image: url("./images/icon-play.svg");
+}
+.study {
+    background-color: var(--color-study);
+    background-image: url("./images/icon-study.svg");
+}
+.exercise {
+    background-color: var(--color-exercise);
+    background-image: url("./images/icon-exercise.svg");
+    background-position-y: top;
+}
+.social {
+    background-color: var(--color-social);
+    background-image: url("./images/icon-social.svg");
+    background-position-y: top;
+}
+.self-care {
+    background-color: var(--color-care);
+    background-image: url("./images/icon-self-care.svg");
+}
+
+.track-info {
+    background-color: var(--color-tracker);
+    border-radius: var(--border-round);
+    padding: var(--dashboard-item-padding);
+    height: 100%;
+    transition: background-color ease-in 0.2s;
+}
+
+.track-info:hover {
+    background-color: var(--color-tracker-hover);
+    cursor: pointer;
+}
+
+.track-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.track-title {
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.track-btn {
+    background-color: inherit;
+    border: none;
+}
+
+.track-btn:hover  {
+    cursor: pointer;
+}
+
+.track-btn:hover path {
+    fill: var(--color-text);
+}
+
+.duration-now {
+    display: block;
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
 .attribution {
-    font-size: 11px;
     text-align: center;
+    margin-top: 5rem;
 }
 
 .attribution a {

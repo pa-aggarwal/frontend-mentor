@@ -13,16 +13,17 @@ function createTimeTracker(tracker) {
     return (`
         <section class="track-section ${convertNameToClass(title)}">
             <div class="track-info">
-                <div classs="track-topbar">
+                <div class="track-topbar">
                     <h2 class="track-title">${title}</h2>
-                    <button type="button" class="track-edit">
-                        <img src="./images/icon-ellipsis.svg" alt="More information about ${title} time tracker">
+                    <button type="button" class="track-btn">
+                        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                     </button>
                 </div>
                 <time datetime="PT${current}H" class="duration-now">${current}hrs</time>
-                <span>
+                <span class="small-light-text">
                     <span class="timeframe-prev">Last Week</span> - 
-                    <time datetime="PT${previous}H" class="duration-prev">${previous}hrs</time></span>
+                    <time datetime="PT${previous}H" class="duration-prev">${previous}hrs</time>
+                </span>
             </div>
         </section>
     `);
@@ -48,7 +49,7 @@ function addTrackersToDashboard(trackers) {
 }
 
 function addTimeframesToForm(timeframes, checkedTf) {
-    const timeForm = document.querySelector(".time-form");
+    const timeForm = document.querySelector(".timeframe-form");
     for (let tf of timeframes) {
         const tfHTML = createTimeframeInput(tf, tf === checkedTf);
         timeForm.insertAdjacentHTML("beforeend", tfHTML);
