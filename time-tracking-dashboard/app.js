@@ -19,11 +19,13 @@ function createTimeTracker(tracker) {
                         <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                     </button>
                 </div>
-                <time datetime="PT${current}H" class="duration-now">${current}hrs</time>
-                <span class="small-light-text">
-                    <span class="timeframe-prev">Last Week</span> - 
-                    <time datetime="PT${previous}H" class="duration-prev">${previous}hrs</time>
-                </span>
+                <div class="mobile-flex">
+                    <time datetime="PT${current}H" class="duration-now">${current}hrs</time>
+                    <span class="small-light-text">
+                        <span class="timeframe-prev">Last Week</span> - 
+                        <time datetime="PT${previous}H" class="duration-prev">${previous}hrs</time>
+                    </span>
+                </div>
             </div>
         </section>
     `);
@@ -95,7 +97,7 @@ async function main() {
     const trackers = getTrackersForTimeframe("weekly", data);
     addTrackersToDashboard(trackers);
 
-    // Updates times shown in trackers using timeframe labels
+    // Updates times shown in trackers based on timeframe selected
     form.addEventListener("click", function(event) {
         const newTimeframe = event.target.getAttribute("for");
         if (!newTimeframe) return undefined;
